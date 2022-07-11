@@ -70,7 +70,11 @@ h6 {
 @media (max-width: 500px) {
 
     .grid-destinos {
-        grid-template-columns: auto auto;
+        grid-template-columns: 48% 48%;
+    }
+
+    .destinos h1, h2, h3, h4, h5, h6 {
+        font-size: 22px;
     }
     
 }
