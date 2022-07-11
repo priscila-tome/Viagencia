@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@200;400;700&family=Barlow&family=Roboto&family=Roboto+Slab:wght@100;500&display=swap');
+
+.grid-destinos {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    margin: 10px 15px 25px 15px;
+    column-gap: 40px;
+    row-gap: 15px;
+}
+
+.destinos {
+    background-color: #fff;
+    padding: 7px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 8px -3px rgb(0 0 0 / 9%);
+    cursor: pointer;
+}
+
+.destinos img {
+    width: 100%;
+}
+
+.destinos h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+}
+
+.linha2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 1.0rem;
+    margin: 5px 0 0 0;
+}
+
+.linha3 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 25px;
+    margin: 5px 0 0 0;
+    width: 100%;
+    text-align: right;
+}
+
+.linhatitulo {
+    margin: 10px 0 0 0;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    text-align: center;
+
+}
+
+@media (max-width: 768px) {
+
+    .grid-destinos {
+        grid-template-columns: auto auto auto;
+    }
+    
+}
+
+@media (max-width: 500px) {
+
+    .grid-destinos {
+        grid-template-columns: auto auto;
+    }
+    
+}
