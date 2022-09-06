@@ -1,3 +1,4 @@
+import java.util.Date;
 
 public class Principal {
 
@@ -35,6 +36,17 @@ public class Principal {
 		hotel.setEmail("hotelverde@hoteis.com");
 
 		hotelDAO.save(hotel);
+		
+		VooDAO vooDAO = new VooDAO();
+
+		Voo voo = new Voo();
+		voo.setDestino("Disney");
+		voo.setData_voo(new Date());
+		voo.setCompanhia("Blue");;
+		voo.setAeroporto("Aeroporto de Guarulhos");;
+		voo.setPortao_de_embarque("09A");
+
+		vooDAO.save(voo);
 
 	}
 
