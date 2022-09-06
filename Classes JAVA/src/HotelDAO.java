@@ -5,20 +5,22 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-	public class DestinoDAO {
+	public class HotelDAO {
 		Connection conn = null;
 		PreparedStatement pstm = null;
 	
-		public void save(Destino destino) {
-			String sql = "INSERT INTO destino(pais,estado,cidade)" + " VALUES(?,?,?)";
+		public void save(Hotel hotel) {
+			String sql = "INSERT INTO hotel(nome,endereco,qtd_de_quartos,telefone,email)" + " VALUES(?,?,?,?,?)";
 			
 			
 			try {
 				conn = Conexao.createConnectionToMySQL();
 				pstm = conn.prepareStatement(sql);
-				pstm.setString(1, destino.getPais());
-				pstm.setString(2, destino.getEstado());
-				pstm.setString(3, destino.getCidade());
+				pstm.setString(1, hotel.getNome());
+				pstm.setString(2, hotel.getEndereco());
+				pstm.setInt(3, hotel.getQtdDeQuartos());
+				pstm.setString(4, hotel.getTelefone());
+				pstm.setString(5, hotel.getEmail());
 				pstm.execute();	
 			}
 			
@@ -48,7 +50,7 @@ import java.util.List;
 		public void removeById(int id) {
 
 			
-			String sql = "DELETE FROM destino WHERE id_destino = ?";
+			String sql = "DELETE FROM hotel WHERE id_hotel = ?";
 			Connection conn = null;
 			PreparedStatement pstm = null;
 			
@@ -77,16 +79,18 @@ import java.util.List;
 			}
 		}
 		
-		public void update (Destino destino) {
-			String sql = "UPDATE destino SET pais = ?, estado = ?, cidade = ?" + "WHERE id_destino = ?";
+		public void update (Hotel hotel) {
+			String sql = "UPDATE hotel SET nome = ?, endereco = ?, qtd_de_quartos = ?, telefone = ?, email = ?" + "WHERE id_hotel = ?";
 			
 			try {
 				conn = Conexao.createConnectionToMySQL();
 				pstm = conn.prepareStatement(sql);
-				pstm.setString(1, destino.getPais());
-				pstm.setString(2, destino.getEstado());
-				pstm.setString(3, destino.getCidade());
-				pstm.setInt(4, destino.getId_destino());
+				pstm.setString(1, hotel.getNome());
+				pstm.setString(2, hotel.getEndereco());
+				pstm.setInt(3, hotel.getQtdDeQuartos());
+				pstm.setString(4, hotel.getTelefone());
+				pstm.setString(5, hotel.getEmail());
+				pstm.setInt(6, hotel.getId_hotel());
 				pstm.execute();	
 			} 
 			
@@ -115,11 +119,11 @@ import java.util.List;
 			
 		}
 	
-		public List<Destino> getDestinos() {
+		public List<Hotel> getDestinos() {
 			
-			String sql = "SELECT * FROM destino";
+			String sql = "SELECT * FROM hotel";
 			
-			List<Destino> destinos = new ArrayList<Destino>();
+			List<Hotel> hoteis = new ArrayList<Hotel>();
 			
 			ResultSet rset = null;
 			
@@ -131,15 +135,19 @@ import java.util.List;
 				
 					while (rset.next()) {
 						
-						Destino destino = new Destino ();
+						Hotel hotel = new Hotel ();
 						
-						destino.setPais(rset.getString("pais"));
+						hotel.setNome(rset.getString("nome"));
 						
-						destino.setEstado(rset.getString("estado"));
+						hotel.setEndereco(rset.getString("endereco"));
 						
-						destino.setCidade(rset.getString("cidade"));
+						hotel.setQtdDeQuartos(rset.getInt("qtd_de_quartos"));
 						
-						destinos.add(destino);
+						hotel.setTelefone(rset.getString("telefone"));
+						
+						hotel.setEmail(rset.getString("email"));
+						
+						hoteis.add(hotel);
 						
 					}
 			}
@@ -166,7 +174,7 @@ import java.util.List;
 				}
 			}
 			
-			return destinos;
+			return hoteis;
 			
 		}
 			
