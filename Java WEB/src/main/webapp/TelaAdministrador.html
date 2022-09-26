@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Tela administrador</title>
+</head>
+
+<body>
+<h1>Adicionar novo destino</h1>
+    <form action="InserirDestino" method="post">
+        <div class="input">
+            <label for="pais">País</label>
+            <input type="text" name="pais" placeholder="País" id="pais">
+        </div>
+
+        <div class="input">
+            <label for="estado">Estado</label>
+            <input type="text" name="estado" placeholder="Estado" id="estado">
+        </div>
+
+        <div class="input">
+            <label for="cidade">Cidade</label>
+            <input type="text" name="cidade" placeholder="Cidade" id="cidade">
+        </div>
+
+        <div class="input">
+            <button>Enviar</button>
+        </div>
+    </form>
+
+    <h1>Adicionar novo hotel</h1>
+    <form action="InserirHotel" method="post">
+        <div class="input">
+            <label for="nome">Nome do hotel</label>
+            <input type="text" name="nome" placeholder="Nome do Hotel" id="nome">
+        </div>
+
+        <div class="input">
+            <label for="endereco">Endereço do hotel</label>
+            <input type="text" name="endereco" placeholder="Endereço do hotel" id="endereco">
+        </div>
+
+        <div class="input">
+            <label for="qtdQuartos">Quantidade de quartos</label>
+            <input type="number" name="qtdQuartos" placeholder="Quantidade de quartos" id="qtdQuartos">
+        </div>
+
+        <div class="input">
+            <label for="email">Email do hotel</label>
+            <input type="email" name="email" placeholder="Email do hotel" id="email">
+        </div>
+
+        <div class="input">
+            <label for="telefone">Telefone do hotel</label>
+            <input type="text" name="telefone" placeholder="Telefone do hotel" id="telefone">
+        </div>
+
+        <div class="input">
+            <button>Enviar</button>
+        </div>
+    </form>
+
+    <h1>Adicionar novo voo</h1>
+    <form action="InserirVoo" method="post">
+        <div class="input">
+            <label for="destino">Destino</label>
+            <input type="text" name="destino" placeholder="Destino do voo" id="destino">
+        </div>
+
+        <div class="input">
+            <label for="data">Data do voo</label>
+            <input type="text" name="data" placeholder="Data do voo" id="data">
+        </div>
+
+        <div class="input">
+            <label for="companhia">Companhia aérea</label>
+            <input type="text" name="companhia" placeholder="Companhia aérea" id="companhia">
+        </div>
+
+        <div class="input">
+            <label for="aeroporto">Aeroporto</label>
+            <input type="text" name="aeroporto" placeholder="Aeroporto" id="aeroporto">
+        </div>
+
+        <div class="input">
+            <label for="portao">Portão de embarque</label>
+            <input type="text" name="portao" placeholder="Portão de embarque" id="portao">
+        </div>
+
+        <div class="input">
+            <button>Enviar</button>
+        </div>
+    </form>
+    
+</body>
+</html>

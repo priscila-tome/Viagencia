@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@200;400&family=Roboto&family=Roboto+Slab:wght@100;500&display=swap');
+
+html {
+    font-size: 62.5%;
+    /*1 rem = 10px*/
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.principal {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 100%;
+    background-color: #f3f3f3;
+    margin: 0;
+    position: relative;
+    top: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+
+header {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: #DF6149;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+}
+
+nav ul {
+    list-style-type: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    margin: 0 10px 0 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #f3f3f3;
+    text-decoration: none;
+    padding: 10px;
+    transition-duration: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #93BF96;
+    color: #f3f3f3;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.logo {
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.logo h1 {
+    font-family: 'Arima', cursive;
+    font-weight: 400;
+    margin: 0;
+    font-size: 3.7rem;
+}
+
+.logo a {
+    color: #f3f3f3;
+}
+
+/* Fim Navbar */
+
+
+
+
+/* Elementos do formulário */
+
+.containerlinhadestino {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.linhadestino {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.0rem;
+    color: #f3f3f3;
+    position: absolute;
+    top: 25px;
+    margin: 0;
+    text-align: left;
+    width: 80%;
+}
+
+.fundoform1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 160px;
+    background-color: #DF6149;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    position: relative;
+}
+
+.fundoform2 {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    background-color: #f3f3f3;
+    border: 3px solid #DF6149;
+    position: absolute;
+    top: 75px;
+    padding: 20px 5px 20px 5px;
+}
+
+.input {
+    margin: 7px;
+}
+
+.input input,
+input[type=text],
+textarea,
+select {
+    height: 40px;
+    padding-left: 7px;
+    border-radius: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: 1px solid #b1b1b1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input input[type=date] {
+    color: rgb(85, 85, 85);
+    width: 100%;
+
+}
+
+.input textarea {
+    resize: vertical;
+    height: 100px;
+    padding-top: 7px;
+}
+
+.input label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.0rem;
+}
+
+.botao {
+    display: flex;
+    width: 15%;
+    background-color: #93BF96;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin: 7px;
+    align-self: flex-end;
+    box-shadow: 1px 1px 8px -3px rgb(0 0 0 / 9%);
+}
+
+.botao a {
+    color: #f3f3f3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fim elementos do formulário */
+
+
+
+/* Rodapé */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #93BF96;
+    width: 100%;
+    height: 30vh;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer h1 a {
+    font-family: 'Arima', cursive;
+    font-weight: 400;
+    margin: 0;
+    font-size: 3.7rem;
+    color: #f3f3f3;
+}
+
+.gridrodape {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+    grid-gap: 15px
+}
+
+.gridrodape img {
+    width: 100%;
+}
+
+.gridrodape div {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #E7F294;
+    transition-duration: 0.3s;
+    align-content: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.gridrodape div:hover {
+    background-color: #DF6149;
+    cursor: pointer;
+}
+
+.gridrodape div a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+.copyright {
+    display: flex;
+    width: 100%;
+    align-self: end;
+    background-color: #E7F294;
+    justify-content: center;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Fim rodapé */
+
+/* Media Queries */
+@media (max-width: 965px) {
+    html {
+        font-size: 50%;
+    }
+
+    .fundoform2 {
+        width: 90%;
+    }
+
+    .linhadestino {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        margin: 5px 20px 0 0;
+        cursor: pointer;
+    }
+
+    .menu-toggle .one,
+    .two,
+    .three {
+        background-color: #f3f3f3;
+        width: 100%;
+        height: 3px;
+        margin: 7px;
+        transition-duration: 0.3s;
+    }
+
+    .menu-section.on {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #df6249d7;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .menu-section.on nav ul {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-section.on nav ul li {
+        display: block;
+        font-size: 3.0rem;
+        align-content: space-between;
+        margin: 30px;
+        padding: 20px;
+    }
+
+    .menu-section.on nav ul li a {
+        padding: 20px;
+    }
+
+    .menu-section.on .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+
+    }
+
+    .menu-section.on .menu-toggle .two {
+        opacity: 0;
+
+    }
+
+    .menu-section.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(6px, -8px);
+
+    }
+
+    @media (max-width: 680px) {
+        .fundoform2 {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+
+        .botao {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            justify-content: center;
+        }
+
+        .linhadestino {
+            font-size: 2.7rem;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+        .linhadestino {
+            font-size: 2.5rem;
+        
+        }
+    }
+
+    @media (max-width: 400px) {
+        .logo, .logo a, .logo h1 {
+            margin-left: 10px;
+            transform: translate(0);
+        }
+
+    }
+
+
+    @media (max-width: 360px) {
+        footer {
+            flex-direction: column;
+        }
+    
+    }
+
+}

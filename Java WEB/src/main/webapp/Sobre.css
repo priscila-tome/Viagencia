@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@200;400;700&family=Roboto&family=Roboto+Slab:wght@100;500&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+.principalsobre {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 100%;
+    background-color: #f3f3f3;
+    margin: 0;
+    position: absolute;
+    top: 61px;
+    padding: 0;
+}
+
+.principalsobre h1 {
+    font-family: 'Arima', cursive;
+    font-weight: 700;
+    margin: 0 0 0 15%;
+    color: #1f1f1f;
+    text-decoration: none;
+    font-size: 5.0rem;
+}
+
+.principalsobre h2 {
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 40px;
+}
+
+.fundosobre {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.705);
+    padding: 15px 15% 15px 15%;
+}
+
+
+.principalsobre p {
+    margin: 0px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+}
+
+.gridmidia {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.gridmidia img {
+    max-width: 100%;
+}
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 30px;
+    row-gap: 15px;
+    padding: 20px;
+}
+
+.span13 {
+    width: 50%;
+}
+
+.divmidia {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 6px;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 1px 1px 8px -3px rgb(0 0 0 / 9%);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.divmidia:hover {
+    z-index: 3;
+    border: 1px solid #93BF96;
+    width: 110%;
+    height: 110%;
+    box-shadow: 1px 1px 8px -3px rgb(0 0 0 / 9%);
+}
+
+.divmidia h3 {
+    margin: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+
+}
+
+.divmidia p {
+    margin: 0;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+}
+
+@media  (max-width: 768px) {
+    .grid {
+        grid-template-columns: auto auto;
+        align-items: center;
+    }
+}
